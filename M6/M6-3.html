@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Web Developer</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <style>
+        .tab {
+            display: none;
+        }
+        .tab-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+
+        .tab-button.active {
+            background-color: #ccc; /* Style for the active tab */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tugas Web Developer</h1>
+    <div>
+        <div class="tab-button active" data-tab="tab1">Tab 1</div>
+        <div class="tab-button" data-tab="tab2">Tab 2</div>
+        <div class="tab-button" data-tab="tab3">Tab 3</div>
+    </div>
+
+    <div id="tab1" class="tab" style="display: block;">
+        <h2>Front-End Development</h2>
+        <p>Mengoptimalkan fungsi aplikasi berdasarkan User Interface (UI) dan User Experience (UX).</p>
+    </div>
+
+    <div id="tab2" class="tab">
+        <h2>Back-End Development</h2>
+        <p>Berjalan di sisi server dengan mengelola data menjadi informasi dari database.</p>
+    </div>
+
+    <div id="tab3" class="tab">
+        <h2>Full Stack Development</h2>
+        <p>Memiliki kemampuan di kedua sisi, yaitu front-end dan back-end, sehingga dapat menangani semua aspek pengembangan web.</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".tab-button").click(function () {
+                $(".tab").hide(); // Hide all tabs
+                $(".tab-button").removeClass("active"); // Remove active class from all buttons
+
+                const tabToShow = $(this).data("tab"); // Get the tab to show
+                $(`#${tabToShow}`).show(); // Show the selected tab
+                $(this).addClass("active"); // Add active class to the clicked button
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+
+    <!-- Include jQuery library -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initially hide the "SHOW" button
+            $(".tampil").hide();
+
+            // Hide "UNIVERSITAS KUNINGAN" and show "SHOW" button on clicking "HIDE"
+            $(".sembunyi").click(function () {
+                $(".uniku").hide("slow");
+                $(".tampil").show();
+                $(".sembunyi").hide();
+            });
+
+            // Show "UNIVERSITAS KUNINGAN" and show "HIDE" button on clicking "SHOW"
+            $(".tampil").click(function () {
+                $(".uniku").show("slow");
+                $(".sembunyi").show();
+                $(".tampil").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button class="sembunyi">HIDE</button>
+    <button class="tampil">SHOW</button>
+    <div class="uniku">UNIVERSITAS KUNINGAN</div>
+</body>
+</html>

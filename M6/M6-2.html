@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+
+    <!-- Include jQuery library -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Fade out the image when clicking "Fade Out"
+            $(".fadeout").click(function () {
+                $("img").fadeOut();
+            });
+
+            // Fade in the image when clicking "Fade In"
+            $(".fadein").click(function () {
+                $("img").fadeIn();
+            });
+
+            // Toggle the image fade in and out, change background color
+            $(".fadetoggle").click(function () {
+                $("img").fadeToggle();
+                $("img").css("background-color", "orange");
+            });
+
+            // Fade to 50% opacity and change background color
+            $(".fadeto").click(function () {
+                $("img").fadeTo("slow", 0.5);
+                $("img").css("background-color", "lightpink");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Buttons to control image visibility and effects -->
+    <button class="fadeout" style="background-color:#add8e6;">Fade Out</button>
+    <button class="fadein" style="background-color:#0ebfff;">Fade In</button>
+    <button class="fadetoggle" style="background-color:#ffa588;">Fade Toggle</button>
+    <button class="fadeto" style="background-color:#ffb6c1;">Fade To</button>
+    <br/>
+    <!-- Image for the jQuery effects -->
+    <img src="gambar/logo_TI.jpg" alt="Logo TI" style="width: 500px; height: auto;" />
+</body>
+</html>

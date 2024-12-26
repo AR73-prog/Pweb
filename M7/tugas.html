@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Hotel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+</head>
+<body>
+    <header class="text-white text-center py-3">
+        <h1>BEST HOTEL</h1>
+    </header>
+    <!-- Menu Navigasi -->
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kamar</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fasilitasDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fasilitas</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Petualangan Alam</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Kolam Renang</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Sumber Air Panas</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Kolam Renang Anak & Dewasa</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Reguler</a></li>
+                                            <li><a class="dropdown-item" href="#">Premium</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Pusat Kebugaran</a></li>
+                            <li><a class="dropdown-item" href="#">Ruang Rapat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pesan Sekarang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Konten -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar Video -->
+            <div class="bg-dark col-md-4 video-section">
+                <h2>Video Tour</h2>
+                <iframe class="mb-2" width="100%" height="150" src="https://www.youtube.com/embed/videoid1" allowfullscreen></iframe>
+                <iframe class="mb-2" width="100%" height="150" src="https://www.youtube.com/embed/videoid2" allowfullscreen></iframe>
+                <iframe class="mb-2" width="100%" height="150" src="https://www.youtube.com/embed/videoid3" allowfullscreen></iframe>
+            </div>
+
+            <!-- Konten Utama: Galeri -->
+            <div class="col-md-8 gallery-section content">
+                <h2>Galeri</h2>
+                <div class="row">
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="gambar/room1.jpg" alt="Kamar 1" class="img-thumbnail">
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="gambar/room2.jpg" alt="Kamar 2" class="img-thumbnail">
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="gambar/room3.jpg" alt="Kamar 3" class="img-thumbnail">
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="gambar/room4.jpg" alt="Kamar 4" class="img-thumbnail">
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="gambar/room5.jpg" alt="Kamar 5" class="img-thumbnail">
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <img src="gambar/room6.jpg" alt="Kamar 6" class="img-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        &copy; 2024 Queen Best Hotel
+    </footer>
+
+    <!-- Bootstrap JS, jQuery, dan custom JS untuk submenu -->
+    <script src="j\sjquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tugas.js"></script>
+</body>
+</html>

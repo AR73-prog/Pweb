@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Video dari Kamera</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Menampilkan Video dari Kamera</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="start">Mulai Kamera</button>
+    <button id="stop">Hentikan Kamera</button>
+
+    <script>
+        $(document).ready(function () {
+            const video = document.getElementById("video");
+            let mediaStream;
+            // Function to start the camera
+            $("#start").click(function () {
+                navigator.mediaDevices
+                    .getUserMedia({ video: true })
+                    .then(function (stream) {
+                        mediaStream = stream;
+                        video.srcObject = stream; // Corrected variable name from "steam" to "stream"
+                    })
+                    .catch(function (err) {
+                        console.error("Gagal mengakses kamera: " + err);
+                        alert("Gagal mengakses kamera. Pastikan izin telah diberikan.");
+                    });
+            });
+            // Function to stop the camera
+            $("#stop").on("click", function () {
+                if (mediaStream) {
+                    mediaStream.getTracks().forEach((track) => track.stop()); // Fixed method name from "getTrack" to "getTracks"
+                    video.srcObject = null;
+                    mediaStream = null; // Reset mediaStream variable
+                }
+            });
+        });
+    </script>
+</body>
+</html>
