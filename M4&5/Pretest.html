@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+        // Function untuk validasi form
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
+
+            // Reset pesan
+            message.style.color = "red";
+
+            // Validasi input tidak boleh kosong
+            if (!username || !password) {
+                message.textContent = "Username dan Password tidak boleh kosong!";
+                return false;
+            }
+
+            // Validasi username dan password benar
+            if (username === "admin" && password === "1234") {
+                message.style.color = "green";
+                message.textContent = "Login berhasil!";
+                return false; // Cegah refresh form
+            } else {
+                message.textContent = "Username atau Password salah!";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

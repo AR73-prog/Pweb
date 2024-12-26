@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Form Inputs</title>
+    <script>
+        function tampilkan() {
+            // Mengambil nilai dari input nama
+            let nm = document.getElementById("nama").value;
+
+            // Mengambil nilai dari radio button jenis kelamin
+            let jk = document.querySelector('input[name="jenkel"]:checked');
+            jk = jk ? jk.value : "Belum dipilih";
+
+            // Menampilkan hasil di div dengan id "hasil"
+            document.getElementById("hasil").innerHTML = 
+                "<strong>Nama:</strong> " + nm + "<br>" +
+                "<strong>Jenis Kelamin:</strong> " + (jk === "L" ? "Laki-Laki" : "Perempuan");
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Inputs</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <td><label for="nama">Nama:</label></td>
+                <td><input type="text" id="nama" name="nama" /></td>
+            </tr>
+            <tr>
+                <td><label>Jenis Kelamin:</label></td>
+                <td>
+                    <input type="radio" id="jenkelL" name="jenkel" value="L" />
+                    <label for="jenkelL">Laki-Laki</label>
+                    <input type="radio" id="jenkelP" name="jenkel" value="P" />
+                    <label for="jenkelP">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="button" onclick="tampilkan()">Tampilkan</button>
+                    <button type="reset">Batal</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="hasil"></div>
+</body>
+</html>

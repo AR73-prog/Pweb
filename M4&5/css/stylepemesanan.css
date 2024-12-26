@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.form-container, .resume-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-bottom: 20px;
+}
+.form-container h2, .resume-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.form-actions button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-actions .save-btn {
+    background-color: #007bff;
+    color: white;
+}
+.form-actions .cancel-btn {
+    background-color: #ffc107;
+    color: white;
+}
+.resume-container {
+    display: none;
+}
+.resume-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+.resume-container li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}

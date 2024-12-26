@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Form Pilih Program Studi</title>
+    <script>
+        function showData() {
+            // Mengambil nilai dari elemen dropdown
+            const prodiValue = document.getElementById("prodi").value;
+            // Menampilkan nilai pada input text
+            document.getElementById("programStudi").value = prodiValue;
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Pilih Program Studi</h1>
+    <form name="form1">
+        <table border="0">
+            <tr>
+                <td><label for="prodi">Program Studi</label></td>
+                <td>
+                    <select id="prodi" name="prodi" onchange="showData()">
+                        <option value="">-Pilih-</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                        <option value="Teknik Sipil">Teknik Sipil</option>
+                        <option value="Manajemen Informatika">Manajemen Informatika</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="programStudi">Data</label></td>
+                <td><input type="text" id="programStudi" name="programStudi" readonly /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

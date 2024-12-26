@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Penjumlahan</title>
+    <script>
+        function penjumlahan() {
+            // Mengambil nilai dari input
+            const bilangan1 = parseFloat(document.getElementById("angka1").value);
+            const bilangan2 = parseFloat(document.getElementById("angka2").value);
+            // Validasi jika input kosong atau tidak valid
+            if (isNaN(bilangan1) || isNaN(bilangan2)) {
+                alert("Mohon masukkan angka yang valid.");
+                return;            
+            }            
+            // Hitung total
+            const total = bilangan1 + bilangan2;
+            // Tampilkan hasil
+            document.getElementById("hasil").value = total;
+        }
+    </script>
+</head>
+<body>
+    <h1>Penjumlahan</h1>
+    <form name="form1">
+        <table border="1">
+            <tr>
+                <td><label for="angka1">Angka 1</label></td>
+                <td><input type="number" id="angka1" name="angka1" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">+</td>
+            </tr>
+            <tr>
+                <td><label for="angka2">Angka 2</label></td>
+                <td><input type="number" id="angka2" name="angka2" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="button" onclick="penjumlahan()">Tampilkan</button>
+                    <button type="reset">Batal</button>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hasil">Hasil</label></td>
+                <td><input type="number" id="hasil" name="hasil" readonly /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

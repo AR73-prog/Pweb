@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Gaji</title>
+    <script>
+        function hitung() {
+            // Ambil nilai input dari form
+            const golongan = document.getElementById("gol").value;
+            const jumlahAnak = parseInt(document.getElementById("anak").value) || 0;
+
+            // Variabel untuk Gaji Pokok dan Persentase Tunjangan
+            let gajiPokok = 0, persenTunjangan = 0;
+
+            // Tentukan gaji pokok dan persen tunjangan berdasarkan golongan
+            if (golongan === "I") {
+                gajiPokok = 250000;
+                persenTunjangan = 0.05;
+            } else if (golongan === "II") {
+                gajiPokok = 300000;
+                persenTunjangan = 0.10;
+            } else if (golongan === "III") {
+                gajiPokok = 350000;
+                persenTunjangan = 0.15;
+            } else {
+                alert("Pilih golongan terlebih dahulu!");
+                return;
+            }
+
+            // Hitung tunjangan dan gaji bersih
+            const tunjangan = (jumlahAnak * gajiPokok) * persenTunjangan;
+            const gajiBersih = gajiPokok + tunjangan;
+
+            // Tampilkan hasil di form
+            document.getElementById("gapok").value = gajiPokok;
+            document.getElementById("tunjangan").value = tunjangan.toFixed(2);
+            document.getElementById("gajiBersih").value = gajiBersih.toFixed(2);
+        }
+
+        function resetForm() {
+            document.getElementById("formGaji").reset(); // Reset semua input form
+        }
+    </script>
+</head>
+<body>
+    <h2>PERHITUNGAN GAJI</h2>
+    <form id="formGaji">
+        <table border="1">
+            <tr>
+                <td><label for="gol">Golongan:</label></td>
+                <td>
+                    <select id="gol" name="gol">
+                        <option value="" disabled selected>Pilih Golongan</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="anak">Jumlah Anak:</label></td>
+                <td><input type="number" id="anak" name="anak" placeholder="Jumlah Anak"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="button" value="Hitung" onclick="hitung()">
+                    <input type="reset" value="Cancel" onclick="resetForm()">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="gapok">Gaji Pokok:</label></td>
+                <td><input type="text" id="gapok" name="gapok" readonly></td>
+            </tr>
+            <tr>
+                <td><label for="tunjangan">Tunjangan:</label></td>
+                <td><input type="text" id="tunjangan" name="tunjangan" readonly></td>
+            </tr>
+            <tr>
+                <td><label for="gajiBersih">Gaji Bersih:</label></td>
+                <td><input type="text" id="gajiBersih" name="gajiBersih" readonly></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
