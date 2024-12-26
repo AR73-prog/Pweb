@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Form Input Teks</title>
+</head>
+<body>
+<h1>Form Input Data Mahasiswa</h1>
+<form method="get" action="m2-2.html">
+    <table border="0">
+        <tr>
+            <td><label for="nim">Nomor Induk Mahasiswa</label></td>
+            <td>
+                <input type="number" id="nim" name="nim" required />
+            </td>
+        </tr>
+        <tr>
+            <td><label for="nama">Nama</label></td>
+            <td>
+                <input type="text" id="nama" name="nama" maxlength="35" minlength="5" size="50" required />
+                <span>Harus 5-35 karakter</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password</label></td>
+            <td>
+                <input type="password" id="pass" name="pass" maxlength="20" minlength="5" size="40" pattern="(?=.[a-zA-Z])(?=.\d)(?=.*[^\w\s]).+" required />
+                <span>Harus berisi kombinasi huruf, angka, dan simbol</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="telp">Nomor Telepon</label></td>
+            <td>
+                <input type="tel" id="telp" name="telp" maxlength="12" minlength="10" pattern="08[0-9]{8,10}" placeholder="08xxxx" required />
+                <span>Harus 10-12 karakter</span>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tgl_lahir">Tanggal Lahir</label></td>
+            <td>
+                <input type="date" id="tgl_lahir" name="tgl_lahir" required />
+            </td>
+        </tr>
+        <tr>
+            <td><label for="e_mail">E-Mail</label></td>
+            <td>
+                <input type="email" id="e_mail" name="e_mail" placeholder="nama@contoh.com" required />
+            </td>
+        </tr>
+        <tr>
+            <td><label for="alamat">Alamat</label></td>
+            <td>
+                <textarea id="alamat" name="alamat" cols="35" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" name="save" value="simpan">SIMPAN</button>
+                <button type="reset" name="cancel" value="batal">BATAL</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas No. 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            width: 950px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 150px;
+            font-weight: bold;
+        }
+        .form-group label.short-label {
+            flex: 0 0 auto;
+            width: auto;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .text-hari {
+            margin-left: 8px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-left: 5px;
+        }
+        .form-group .checkbox-label {
+            display: inline-flex;
+            align-items: center;
+        }
+        .form-group .checkbox-label input {
+            margin-right: 5px;
+        }
+        .input-short {
+            width: 60px !important;
+        }
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-actions button.save {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .form-actions button.cancel {
+            background-color: #ffc107;
+            color: #000;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Pemesanan</h2>
+        <form method="get">
+            <div class="form-group">
+                <label>Id Pemesan</label>
+                <input type="number" name="id">
+            </div>
+            <div class="form-group">
+                <label>Nama Pemesan</label>
+                <input type="text" name="nama">
+            </div>
+            <div class="form-group">
+                <label>Nomor Identitas</label>
+                <input type="number" name="noIdentitas">
+            </div>
+            <div class="form-group">
+                <label>Tipe Kamar</label>
+                <select name="tipeKamar">
+                    <option value="-">--Pilih--</option>
+                    <option value="std">STANDARD</option>
+                    <option value="del">DELUXE</option>
+                    <option value="fam">FAMILY</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Harga</label>
+                <input type="text" name="harga">
+            </div>
+            <div class="form-group">
+                <label>Tanggal Pesan</label>
+                <input type="date" name="tanggalPesan">
+            </div>
+            <div class="form-group">
+                <label class="short-label">Durasi Menginap</label>
+                <input type="number" name="durasiMenginap" class="input-short"> <span class="text-hari">Hari</span>
+            </div>
+            <div class="form-group">
+                <label>Termasuk Breakfast</label>
+                <div class="checkbox-label">
+                    <input type="checkbox" name="termasukBreakfast"> Ya
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Total Bayar</label>
+                <input type="number" name="totalBayar">
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="save" name="save" value="simpan">SIMPAN</button>
+                <button type="reset" class="cancel" name="cancel" value="batal">BATAL</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

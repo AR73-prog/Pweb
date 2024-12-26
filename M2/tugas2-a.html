@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Kamar</title>
+</head>
+<body>
+    <h1>Form Tambah Data Kamar</h1>
+    <form action="proses_kamar.html" method="post">
+        <div>
+            <label for="idKamar">ID Kamar:</label>
+            <input type="text" id="idKamar" name="idKamar" required>
+        </div>
+        <div>
+            <label for="gambarRuangan">Gambar Ruangan:</label>
+            <input type="file" id="gambarRuangan" name="gambarRuangan" accept="image/*" required>
+        </div>
+        <div>
+            <label for="jenisKamar">Jenis Kamar:</label>
+            <input type="text" id="jenisKamar" name="jenisKamar" required>
+        </div>
+        <div>
+            <label for="hargaKamar">Harga:</label>
+            <input type="number" id="hargaKamar" name="hargaKamar" required>
+        </div>
+        <div>
+            <label for="fasilitasKamar">Fasilitas:</label>
+            <textarea id="fasilitasKamar" name="fasilitasKamar" rows="3" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Simpan</button>
+            <button type="reset">Batal</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Pemesanan Kamar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="form-container">
+    <h1>Form Pemesanan</h1>
+    <form id="bookingForm">
+        <div class="form-group">
+            <label for="idPemesan">Id Pemesan:</label>
+            <input type="text" name="idPemesan" value="1" readonly />
+        </div>
+        <div class="form-group">
+            <label for="namaPemesan">Nama Pemesan:</label>
+            <input type="text" name="namaPemesan" required />
+        </div>
+        <div class="form-group">
+            <label for="nomorIdentitas">Nomor Identitas:</label>
+            <input type="text" name="nomorIdentitas" required />
+        </div>
+        <div class="form-group">
+            <label for="tipeKamar">Tipe Kamar:</label>
+            <select name="tipeKamar" required>
+                <option value="">--Pilih--</option>
+                <option value="STANDAR">STANDAR</option>
+                <option value="DELUXE">DELUXE</option>
+                <option value="FAMILY">FAMILY</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="harga">Harga:</label>
+            <input type="text" name="harga" />
+        </div>
+        <div class="form-group">
+            <label for="tanggalPesan">Tanggal Pesan:</label>
+            <input type="date" name="tanggalPesan" required />
+        </div>
+        <div class="form-group">
+            <label for="durasiMenginap">Durasi Menginap:</label>
+            <input type="number" name="durasiMenginap" min="1" value="1" required /> Hari
+        </div>
+        <div class="form-group">
+            <label>Termasuk Breakfast:</label>
+            <input type="checkbox" name="includeBreakfast" />
+            <label for="includeBreakfast">Ya</label>
+        </div>
+        <div class="form-group">
+            <label for="totalBayar">Total Bayar:</label>
+            <input type="text"  name="totalBayar" />
+        </div>
+        <div class="button-group">
+            <button type="submit" class="save">Simpan</button>
+            <button type="reset" class="cancel">Batal</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

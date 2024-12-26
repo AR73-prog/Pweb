@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Fasilitas</title>
+</head>
+<body>
+    <h1>Form Tambah Fasilitas</h1>
+    <form action="proses_fasilitas.html" method="post">
+        <div>
+            <label for="idFasilitas">ID Fasilitas:</label>
+            <input type="text" id="idFasilitas" name="idFasilitas" required>
+        </div>
+        <div>
+            <label for="namaFasilitas">Nama Fasilitas:</label>
+            <input type="text" id="namaFasilitas" name="namaFasilitas" required>
+        </div>
+        <div>
+            <label for="hargaWeekend">Harga Weekend:</label>
+            <input type="number" id="hargaWeekend" name="hargaWeekend" required>
+        </div>
+        <div>
+            <label for="hargaWeekday">Harga Weekday:</label>
+            <input type="number" id="hargaWeekday" name="hargaWeekday" required>
+        </div>
+        <div>
+            <label for="kuotaFasilitas">Kuota:</label>
+            <input type="number" id="kuotaFasilitas" name="kuotaFasilitas" required>
+        </div>
+        <div>
+            <label for="jamBuka">Jam Buka:</label>
+            <input type="time" id="jamBuka" name="jamBuka" required>
+        </div>
+        <div>
+            <label for="jamTutup">Jam Tutup:</label>
+            <input type="time" id="jamTutup" name="jamTutup" required>
+        </div>
+        <div>
+            <button type="submit">Simpan</button>
+            <button type="reset">Batal</button>
+        </div>
+    </form>
+</body>
+</html>
