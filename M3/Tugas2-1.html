@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tambah Data Form</title>
+    <link rel="stylesheet" href="css/Style2.css" />
+</head>
+<body>
+<div class="form-container">
+    <h2>Form Data Kamar</h2>
+    <form>
+        <div class="form-group">
+            <label for="idKamar">Id Kamar:</label>
+            <input type="text" id="idKamar" name="idKamar" placeholder="Id Kamar">
+        </div>
+        <div class="form-group">
+            <label>Gambar Ruangan:</label>
+            <div class="image-option">
+                <input type="radio" id="gambar1" name="gambarRuangan" value="gambar1.jpg">
+                <label for="gambar1">
+                    <img src="gambar/gambar1.jpg" alt="Gambar 1">
+                    <div>Standard</div>
+                </label>
+            </div>
+            <div class="image-option">
+                <input type="radio" id="gambar2" name="gambarRuangan" value="gambar2.jpg">
+                <label for="gambar2">
+                    <img src="gambar/gambar2.jpg" alt="Gambar 2">
+                    <div>Deluxe</div>
+                </label>
+            </div>
+            <div class="image-option">
+                <input type="radio" id="gambar3" name="gambarRuangan" value="gambar3.jpg">
+                <label for="gambar3">
+                    <img src="gambar/gambar3.jpg" alt="Gambar 3">
+                    <div>VIP</div>
+                </label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="jenisKamar">Jenis Kamar:</label>
+            <input type="text" id="jenisKamar" name="jenisKamar" placeholder="Jenis Kamar">
+        </div>
+        <div class="form-group">
+            <label for="harga">Harga:</label>
+            <input type="number" id="harga" name="harga" placeholder="Harga">
+        </div>
+        <div class="form-group">
+            <label for="fasilitas">Fasilitas:</label>
+            <input type="text" id="fasilitas" name="fasilitas" placeholder="Fasilitas">
+        </div>
+        <div class="form-actions">
+            <button type="submit">Tambah Data Kamar</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

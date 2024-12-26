@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Halaman - Nasi Goreng</title>
+    <style>
+        .container {
+            width: 600px;
+            border: 2px solid #000;
+            padding: 10px;
+            display: flex;
+            align-items: flex-start;
+            margin: 20px auto;
+        }
+
+        .image {
+            width: 2000px;
+            height: 150px;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        .title {
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .excerpt {
+            border: 1px solid #000;
+            padding: 10px;
+            height: 80px;
+            overflow: hidden;
+            transition: height 0.3s;
+        }
+
+        /* Checkbox untuk toggle */
+        .read-more-toggle {
+            display: none;
+        }
+
+        /* Label sebagai tombol baca selengkapnya */
+        .read-more-label {
+            text-align: right;
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Mengatur gaya saat checkbox diaktifkan */
+        .read-more-toggle:checked + .excerpt {
+            height: auto;
+        }
+
+        .read-more-toggle:checked + .excerpt + .read-more-label::after {
+            content: " Tampilkan Lebih Sedikit";
+        }
+
+        .read-more-label::after {
+            content: " Baca Selengkapnya";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="gambar/goreng.jpeg" alt="Gambar Nasi Goreng">
+        </div>
+        <div class="content">
+            <div class="title">Sejarah dan Resep Nasi Goreng</div>
+            <!-- Checkbox untuk toggle "Baca Selengkapnya" -->
+            <input type="checkbox" id="read-more-toggle" class="read-more-toggle">
+            <div class="excerpt">
+                Nasi goreng adalah salah satu hidangan paling populer di Indonesia. 
+                Terbuat dari nasi yang digoreng bersama berbagai bumbu seperti bawang putih, bawang merah, kecap manis, dan cabai, 
+                nasi goreng memiliki cita rasa yang khas dan sangat digemari oleh masyarakat. 
+                Dalam perkembangannya, nasi goreng memiliki banyak variasi, mulai dari nasi goreng ayam, nasi goreng seafood, hingga nasi goreng kambing yang lezat.
+                <br><br>
+                Asal mula nasi goreng bisa dilacak kembali ke tradisi kuliner Tiongkok, 
+                di mana masyarakatnya tidak suka membuang sisa makanan. Nasi yang tersisa diolah kembali dengan cara digoreng untuk menghasilkan hidangan baru yang lezat. 
+                Di Indonesia, nasi goreng menjadi makanan yang bisa dinikmati kapan saja baik untuk sarapan, makan siang, atau makan malam.
+            </div>
+            <!-- Label yang berfungsi sebagai tombol "Baca Selengkapnya" -->
+            <label for="read-more-toggle" class="read-more-label"></label>
+        </div>
+    </div>
+</body>
+</html>
